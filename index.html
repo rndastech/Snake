@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <div class="score-container">Score: <span id="score">0</span></div>
+            <div class="level-container">Level: <span id="level">1</span></div>
+            <div class="high-score-container">High Score: <span id="high-score">0</span></div>
+        </div>
+        
+        <canvas id="game-board"></canvas>
+        
+        <div class="controls">
+            <button id="start-btn">Start Game</button>
+            <button id="pause-btn">Pause</button>
+        </div>
+
+        <div class="mobile-controls">
+            <div class="mobile-control-row">
+                <button id="up-btn">↑</button>
+            </div>
+            <div class="mobile-control-row">
+                <button id="left-btn">←</button>
+                <button id="right-btn">→</button>
+            </div>
+            <div class="mobile-control-row">
+                <button id="down-btn">↓</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-over-modal" class="modal">
+        <div class="modal-content">
+            <h2>Game Over!</h2>
+            <p>Your score: <span id="final-score">0</span></p>
+            <p>High score: <span id="modal-high-score">0</span></p>
+            <button id="restart-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
